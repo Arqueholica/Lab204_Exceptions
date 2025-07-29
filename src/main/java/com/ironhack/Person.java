@@ -3,33 +3,37 @@ package com.ironhack;
 import java.util.Objects;
 
 public class Person {
+    private static int counter = 0;
 
-    private String id;
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
-    private String ocupation;
+    private String occupation;
+
 
 //    CONSTRUCTORES
 
 
-    public Person(String id, String firstName, String lastName, int age, String ocupation) {
-        this.id = id;
+    public Person( String firstName, String lastName, int age, String occupation) {
+        this.id = counter++;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.ocupation = ocupation;
+        this.occupation = occupation;
     }
 
 
 
 
     //    GETTERS AND SETTERS
-    public String getId() {
+
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -61,26 +65,26 @@ public class Person {
 
     }
 
-    public String getOcupation() {
-        return ocupation;
+    public String getOccupation() {
+        return occupation;
     }
 
-    public void setOcupation(String ocupation) {
-        this.ocupation = ocupation;
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
     }
 
-//    EQUAL MÉTHOD minus ID + HASH
+    //    EQUAL MÉTHOD minus ID + HASH
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return getAge() == person.getAge() && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getOcupation(), person.getOcupation());
+        return getAge() == person.getAge() && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getOccupation(), person.getOccupation());
     }
 
 //    @Override
 //    public int hashCode() {
-//        return Objects.hash(getFirstName(), getLastName(), getAge(), getOcupation());
+//        return Objects.hash(getFirstName(), getLastName(), getAge(), getOccupation());
 //    }
 
 
@@ -94,7 +98,7 @@ public class Person {
                 "ID: " + id + '\n' +
                 "Name: " + firstName + " " + lastName + '\n' +
                 "Age: " + age + '\n' +
-                "Occupation: " + ocupation + '\n' +
+                "Occupation: " + occupation + '\n' +
                 "____________________________________";
     }
 }

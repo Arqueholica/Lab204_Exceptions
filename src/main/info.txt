@@ -1,0 +1,7 @@
+Human
+________________
+ID: 0
+Name: Mari Sánchez
+Age: 27
+Occupation: Influencer
+____________________________________
