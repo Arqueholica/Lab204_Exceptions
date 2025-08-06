@@ -36,12 +36,15 @@ public class PersonsList  {
         throw new RuntimeException("No se encontró a: " + name);
     };
 
-        public void clonePlusId(Person person){
+        public Person clonePlusId(Person person){
 
             Person clonePlusId = new Person(person.getFirstName(), person.getLastName(), person.getAge(), person.getOccupation());
             System.out.println("Clone created:\n" + clonePlusId);
+            return clonePlusId;
 
             }
+
+
 
 public void toFile(Person person) throws IOException {
             String filepath = "src/main/info.txt";

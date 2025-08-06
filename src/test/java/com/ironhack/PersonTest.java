@@ -1,6 +1,9 @@
 package com.ironhack;
 
+
 import org.junit.jupiter.api.Test;
+
+
 
 import static org.junit.jupiter.api.Assertions.*;
 /*
@@ -12,12 +15,16 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class PersonTest {
 
+
+
+
+
     @Test
     void setAge_zero() {
-        Person human1 = new Person("Mari","Sánchez", 56, "Unemployed");
-        human1.setAge(2);
+        Person human1 = new Person("Mari","Sánchez", 1, "Unemployed");
+        human1.setAge(1);
 
-        assertEquals(2, human1.getAge(), "El test funciona");
+        assertEquals(1, human1.getAge(), "El test funciona");
 
     }
 }
