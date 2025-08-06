@@ -38,6 +38,7 @@ public class Main {
         list.showHuman();
         list.findByName("Josefina Rodríguez");
         list.clonePlusId(human1);
+        list.clonePlusId(human2);
 
         list.toFile(human1);
 
